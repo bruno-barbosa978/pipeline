@@ -7,7 +7,11 @@ de boas práticas.
 """
 import os
 
+#Modo debug ativo - nunca deve ir pra produção
 DEBUG=True
+
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 DB_HOST  = os.getenv("DB_HOST","localhost")
 DB_USER = os.getenv("DB_USER","admin")
