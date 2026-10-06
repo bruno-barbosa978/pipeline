@@ -42,7 +42,7 @@ metadata:
   namespace: cartoes
 data:
   DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-  API_KEY_BANDEIRA: ${{secrets.BANDEIRA_KEY_API }}
+  API_KEY_BANDEIRA: ${{ secrets.BANDEIRA_KEY_API }}
 ---
 apiVersion: apps/v1
 kind: Deployment

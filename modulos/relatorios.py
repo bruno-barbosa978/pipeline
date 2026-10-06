@@ -19,6 +19,7 @@ def gerar_relatorio_pdf(formato):
     resultado = subprocess.run(comando, capture_output=True, text=True, check=True)
     return resultado.stdout
 
+
 def baixar_extrato(nome_arquivo):
     """Lê um arquivo de extrato do disco. VULNERÁVEL: nenhuma validação
     impede o uso de '../' para escapar do diretório de extratos."""
