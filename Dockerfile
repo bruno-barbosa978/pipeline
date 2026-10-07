@@ -13,9 +13,11 @@ FROM python:3.12-slim
 WORKDIR /app
 
 COPY requirements.txt .
-RUN apt update\
-	&&apt-get upgrade -y \
+RUN apt update \
+	&& apt install gcc -y \
+	&& apt upgrade -y \
 	&& pip install --no-cache-dir -r requirements.txt \
+	&& apt clean \
 	&& rm -rf /var/lib/apt/lists/*
 
 COPY . .

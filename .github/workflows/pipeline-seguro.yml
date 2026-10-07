@@ -196,7 +196,7 @@ jobs:
           ignore-unfixed: true
           exit-code: '1'
           format: 'table'
-          #output: 'trivy-image-results.sarif'
+#          output: 'trivy-image-results.sarif'
 
       - name: Publicar relatorio da imagem
         if: always()
